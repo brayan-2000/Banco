@@ -1,0 +1,67 @@
+BANCO INTERMEDIARIO VR - PROTOTIPO PARA UNITY 6 / URP
+
+INICIO RAPIDO - INSTALACION DIRECTA
+1. Cierra la ventana Import Unity Package que muestra errores.
+2. Extrae este ZIP en Windows (clic derecho > Extraer todo).
+3. En Unity, clic derecho en Assets > Show in Explorer.
+4. Copia la carpeta BancoRapido extraida DENTRO de Assets del proyecto.
+   Debe quedar Assets/BancoRapido/BancoSimulacion.cs.
+   No copies el ZIP ni lo importes con Custom Package.
+5. Vuelve a Unity y espera a que compile los scripts.
+6. Menu superior: Banco VR > Crear simulacion.
+7. Guarda la escena y pulsa Play. Abre la pestana Game.
+Si ya existe Assets/BancoRapido de la importacion anterior, sustituye solo
+los archivos de esta carpeta por los del ZIP. No borres otros archivos.
+La oficina aparece al pulsar Play, no antes.
+
+CONTROLES PC
+Clic izquierdo: aprobar, detener, cambiar modo, reiniciar.
+Boton derecho + mover raton: mirar alrededor desde el escritorio.
+G: activar/desactivar reticula y seleccion por mirada (2 segundos).
+En modo mirada, apunta al boton con el centro de la camara.
+Para las primeras pruebas usa clic, con la camara mirando hacia el monitor.
+
+INCLUYE
+Oficina 3D con escritorio, teclado, ventanal y ciudad nocturna estilizada.
+8 transferencias ficticias. SHALIKA FANDATION es siempre la segunda.
+Validacion por distancia de Levenshtein, monto por pais y beneficiario nuevo.
+Modo manual: el jugador revisa los datos sin alertas automaticas.
+Modo defensa: se muestran las alertas; el jugador conserva la decision final.
+Resultado por orden y total de coincidencias con el validador.
+Las ordenes 2, 4, 5 y 8 generan alertas. Las demas no.
+Los umbrales son didacticos, no limites financieros reales.
+No hay conexiones bancarias, Firebase ni servicios externos.
+
+COMO ESTA HECHO
+La escena guardada contiene el componente BancoSimulacion. La geometria se
+crea durante Play: es normal que no aparezca antes y desaparezca al detenerlo.
+Para cambiar colores, posiciones o transferencias edita BancoSimulacion.cs.
+El paquete usa geometria primitiva y TextMesh, sin modelos o plugins pagos.
+No necesita TextMeshPro ni configuracion de eventos UI.
+No cambia Project Settings ni instala paquetes automaticamente.
+
+IPHONE / CARDBOARD: PASO POSTERIOR, NO INCLUIDO
+Este es el prototipo jugable de escritorio y la logica reutilizable para VR.
+NO incluye Cardboard XR, seguimiento de cabeza ni imagen estereoscopica.
+NO es un APK, una app iOS ni un archivo importable en la app Cardboard.
+Para VR real: instalar/configurar el plugin oficial Cardboard compatible,
+probar HelloCardboard y adaptar su rig a esta escena. Asignar su Camera al
+campo camara del componente BancoSimulacion, desmarcar controlPC y activar
+seleccionPorMirada. Colocar esa camara en (0, 1.8, -1.65), mirando hacia +Z.
+Conservar una sola camara activa y un solo AudioListener. El plugin debe
+configurarse por completo; asignar la camara por si solo no habilita XR.
+Para compilar e instalar en iPhone: exportar iOS y usar Mac con Xcode y firma.
+Guia oficial: https://developers.google.com/cardboard/develop/unity/quickstart
+
+LIMITES Y VERIFICACION
+Codigo revisado y estructura del paquete comprobada. No se ha ejecutado ni
+compilado en Unity en este entorno. La primera prueba real debe hacerse en
+el editor del usuario; si hay errores, enviar el primer error rojo de Console.
+No incluye portal de entrada, audio ni modelos realistas. El jugador inicia
+sentado en el puesto de la analista. No se guardan resultados entre sesiones.
+
+PRUEBA RAPIDA
+En manual: aprobar 1, detener 2, aprobar 3, detener 4 y 5, aprobar 6 y 7,
+detener 8. Resultado esperado: 8/8 coincidencias y 4 ordenes detenidas.
+Reiniciar y seleccionar CON DEFENSA: la orden 2 debe mostrar tres alertas.
+Probar G y mantener la reticula sobre un boton durante dos segundos.

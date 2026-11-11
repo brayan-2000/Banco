@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Intermediario_VR.unity
+    guid: 672bf8b0035200a41b9e403d0cdbb410
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.36.0/Hello Cardboard/Scenes/HelloCardboard.unity
+    guid: 03c48c5e809944fa4afcae9973709f26
+  - enabled: 0
+    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.36.0/Hello Cardboard/Scenes/VrMode.unity
+    guid: a45c80a4da1fa4625a30ce04b599e90d
+  m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 202b2f8e11a21d14cbdc3f78d77ac3c0, type: 2}
